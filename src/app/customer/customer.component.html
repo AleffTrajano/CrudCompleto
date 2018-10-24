@@ -1,0 +1,43 @@
+ 
+<marquee class="marquee">Cadastro</marquee>
+<div class="row">
+  <div class="col-md-5">
+    <form [formGroup]="this.customerService.form" (ngSubmit)="onSubmit()">
+      <input type="hidden" formControlName="$key">
+      <div class="form-group">
+       <label>Nome</label>
+        <input formControlName="fullName" class="form-control" [ngClass]="{'is-invalid':submitted && formControls.fullName.errors}">
+        <div class="invalid-feedback" *ngIf="submitted && formControls.fullName.errors">
+            Este campo é obrigatório.</div>
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input formControlName="email" class="form-control" [ngClass]="{'is-invalid':submitted && formControls.email.errors}">
+        <div class="invalid-feedback" *ngIf="submitted && formControls.email.errors">
+            Endereço de email invalido.</div>
+      </div>
+      <div class="form-group">
+        <label>telefone</label>
+        <input formControlName="mobile" class="form-control" [ngClass]="{'is-invalid':submitted && formControls.mobile.errors}">
+        <div class="invalid-feedback" *ngIf="submitted && formControls.mobile.errors">
+          <label *ngIf='formControls.errors.required'>Este campo é obrigatório.</label>
+          <label *ngIf="formControls.mobile.errors.minlength">
+              Pelo menos 8 números.</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Localização</label>
+        <input formControlName="location" class="form-control">
+      </div>
+      <div class="form-group">
+        <input type="submit" class="btn btn-primary" value="Submit">
+      </div>
+    </form>
+    <div class="alert alert-info"  *ngIf="showSuccessMessage">
+        Submetido com sucesso.
+    </div>
+  </div>
+  <div class="col-md-7">
+    <app-customer-list></app-customer-list>
+  </div>
+</div>
