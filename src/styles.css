@@ -2,15 +2,14 @@
 /* You can add global styles to this file, and also import other style files */
 input, .form-control {
     border-radius: 2px 2px 2px 2px/2px 2px 2px 2px; 
-   }
-   
-   .btn {
+}
+
+.btn {
        border-radius: 2px 2px 2px 2px/2px 2px 2px 2px; 
-   }
-   .table-dark th, .table-dark td, .table-dark.table-hover .table-active:hover>th, .table-dark.table-hover .table-active:hover>td {
+   }.table-dark th, .table-dark td, .table-dark.table-hover .table-active:hover>th, .table-dark.table-hover .table-active:hover>td {
        background-color: #007bff;
    }
-   body {
+body {
        margin: 0;
        font-family: "Neucha", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
        font-size: 1rem;
@@ -20,45 +19,45 @@ input, .form-control {
        text-align: left;
        background-color: #fff;
    }
-   .btn-primary {
+.btn-primary {
        color: #fff;
        background-color:#007bff;
        border-color: #333;
    }
    
-   .titulo{
+.titulo{
        margin-bottom: .5rem;
        font-family: inherit;
        font-weight: 500;
        position: relative;
        color: black;
    }
-   .alert alert-danger{
+.alert alert-danger{
        border-radius: 2px 2px 2px 2px/2px 2px 2px 2px; 
    }
-   .table-dark{
+.table-dark{
        border-radius: 2px 2px 2px 2px/2px 2px 2px 2px; 
    }
    
-   .marquee{
+.marquee{
        color: #007bff,
        
    }
    
-   .btn-outline-info {
+.btn-outline-info {
        color: #ffffff;
        background-color: #007bff;
        background-image: none;
        border-color: #ffffff;
    }
    
-   .form-control {
+.form-control {
        display: block;
        width: 50%;
        
    }
    
-   .btn-outline-danger:hover {
+.btn-outline-danger:hover {
        color: #fff;
        background-color: #dc3545;
        border-color: #dc3545;

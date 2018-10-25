@@ -71,7 +71,9 @@ export class AuthService {
       }, err => reject(err))
     })
   }
-
+  /**
+   * Method or logout
+   */
   doLogout(){
     return new Promise((resolve, reject) => {
       if(firebase.auth().currentUser){

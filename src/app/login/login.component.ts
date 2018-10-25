@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../core/auth.service'
-import { Router, Params } from '@angular/router';
+import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -8,7 +8,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   templateUrl: 'login.component.html',
   styleUrls: ['login.scss']
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
   errorMessage: string = '';
@@ -18,15 +18,16 @@ export class LoginComponent {
     private router: Router,
     private fb: FormBuilder
   ) {
-    this.createForm();
+    
   }
 
-  createForm() {
+  ngOnInit(){
     this.loginForm = this.fb.group({
       email: ['', Validators.required ],
       password: ['',Validators.required]
     });
   }
+
 
   tryFacebookLogin(){
     this.authService.doFacebookLogin()
